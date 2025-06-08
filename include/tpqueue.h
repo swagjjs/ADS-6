@@ -1,9 +1,6 @@
 // Copyright 2022 NNTU-CS
-// Copyright 2023 Your Name
-
-#ifndef TPQUEUE_H
-#define TPQUEUE_H
-
+#ifndef INCLUDE_TPQUEUE_H_
+#define INCLUDE_TPQUEUE_H_
 #include <stdexcept>
 
 template<typename T>
@@ -12,11 +9,10 @@ class TPQueue {
   struct Node {
     T data;
     Node* next;
-    explicit Node(const T& data, Node* next = nullptr) : data(data), next(next) {}
+    explicit Node(const T& data, Node* next = nullptr) 
+        : data(data), next(next) {}
   };
-
   Node* head;
-
  public:
   TPQueue() : head(nullptr) {}
   ~TPQueue() {
@@ -61,4 +57,4 @@ struct SYM {
   int prior;
 };
 
-#endif  // TPQUEUE_H
+#endif 
